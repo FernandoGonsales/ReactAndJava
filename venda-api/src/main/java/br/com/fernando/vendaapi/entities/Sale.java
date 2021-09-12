@@ -1,2 +1,28 @@
-package br.com.fernando.vendaapi.entities;public class Sele {
+package br.com.fernando.vendaapi.entities;
+
+import lombok.*;
+import javax.persistence.*;
+import java.time.LocalDate;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@Builder
+@Entity
+@Table(name = "tb_sales")
+public class Sale {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private Integer visited;
+    private Integer deals;
+    private Double amount;
+    private LocalDate date;
+
+    @ManyToOne
+    @JoinColumn(name = "seller_id")
+    private Seller seller;
+
 }
