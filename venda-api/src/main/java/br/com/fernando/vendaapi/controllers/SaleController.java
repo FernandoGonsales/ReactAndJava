@@ -1,6 +1,8 @@
 package br.com.fernando.vendaapi.controllers;
 
 import br.com.fernando.vendaapi.dtos.SaleDTO;
+import br.com.fernando.vendaapi.dtos.SaleSucessDTO;
+import br.com.fernando.vendaapi.dtos.SaleSumDTO;
 import br.com.fernando.vendaapi.services.SaleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -22,5 +24,15 @@ public class SaleController {
     @GetMapping("/sales")
     public ResponseEntity<Page<SaleDTO>> findAll(Pageable pageable) {
         return ResponseEntity.ok(saleService.findAll(pageable));
+    }
+
+    @GetMapping("/amount-by-seller")
+    public ResponseEntity<List<SaleSumDTO>> amountGroupedBySeller() {
+        return ResponseEntity.ok(saleService.amountGroupedBySeller());
+    }
+
+    @GetMapping("/sucess-by-seller")
+    public ResponseEntity<List<SaleSucessDTO>> sucessGroupedBySeller() {
+        return ResponseEntity.ok(saleService.sucessGroupedBySeller());
     }
 }
