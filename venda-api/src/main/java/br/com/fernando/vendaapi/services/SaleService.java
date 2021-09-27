@@ -36,8 +36,8 @@ public class SaleService {
     }
 
     @Transactional(readOnly = true)
-    public List<SaleSucessDTO> sucessGroupedBySeller() {
-        return saleRepository.sucessGroupedBySeller();
+    public List<SaleSucessDTO> successGroupedBySeller() {
+        return saleRepository.successGroupedBySeller();
     }
 
 }
