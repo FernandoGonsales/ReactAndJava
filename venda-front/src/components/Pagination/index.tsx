@@ -11,19 +11,19 @@ const Pagination = ({ page, onPageChange }: Props) => {
       <nav>
         <ul className="pagination">
           <li className={`page-item ${page.first ? 'disabled' : ''}`}>
-            <span className="page-link" onClick={() => onPageChange(0)}>&laquo;</span>
+            <span title="Primeira Página" style={{cursor:'pointer'}} className="page-link" onClick={() => onPageChange(0)}>&laquo;</span>
           </li>
           <li className={`page-item ${page.first ? 'disabled' : ''}`}>
-            <span className="page-link" onClick={() => onPageChange(page.number - 1)}>&lt;</span>
+            <span title="Voltar Página" style={{cursor:'pointer'}} className="page-link" onClick={() => onPageChange(page.number - 1)}>&lt;</span>
           </li>
           <li className="page-item disabled">
             <span className="page-link">{page.number + 1}</span>
           </li>
           <li className={`page-item ${page.last ? 'disabled' : ''}`}>
-            <span className="page-link" onClick={() => onPageChange(page.number + 1)}>&gt;</span>
+            <span title="Próxima Página" style={{cursor:'pointer'}} className="page-link" onClick={() => onPageChange(page.number + 1)}>&gt;</span>
           </li>
           <li className={`page-item ${page.last ? 'disabled' : ''}`}>
-            <span className="page-link" onClick={() => onPageChange(page.totalPages - 1)}>&raquo;</span>
+            <span title="Última Página" style={{cursor:'pointer'}} className="page-link" onClick={() => onPageChange(page.totalPages - 1)}>&raquo;</span>
           </li>
         </ul>
       </nav>
