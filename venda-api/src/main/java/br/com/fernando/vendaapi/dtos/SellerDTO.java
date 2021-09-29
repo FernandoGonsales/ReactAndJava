@@ -1,16 +1,12 @@
 package br.com.fernando.vendaapi.dtos;
 
 import br.com.fernando.vendaapi.entities.Seller;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import java.io.Serializable;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
-@Setter
+@Data
 public class SellerDTO implements Serializable {
 
     private Long id;

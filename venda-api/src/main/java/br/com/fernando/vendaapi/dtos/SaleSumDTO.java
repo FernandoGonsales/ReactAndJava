@@ -1,14 +1,12 @@
 package br.com.fernando.vendaapi.dtos;
 
 import br.com.fernando.vendaapi.entities.Seller;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import java.io.Serializable;
 
 @NoArgsConstructor
-@Getter
-@Setter
+@Data
 public class SaleSumDTO implements Serializable {
 
     private String sellerName;

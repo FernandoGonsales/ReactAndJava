@@ -6,9 +6,7 @@ import java.time.LocalDate;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Getter
-@Setter
-@Builder
+@Data
 @Entity
 @Table(name = "tb_sales")
 public class Sale {

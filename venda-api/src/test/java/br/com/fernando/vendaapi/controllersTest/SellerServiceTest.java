@@ -5,19 +5,17 @@ import br.com.fernando.vendaapi.entities.Sale;
 import br.com.fernando.vendaapi.entities.Seller;
 import br.com.fernando.vendaapi.repositories.SellerRepository;
 import br.com.fernando.vendaapi.services.SellerService;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class SellerServiceTest {
@@ -38,17 +36,16 @@ public class SellerServiceTest {
                 createSeller(1L, "Fernando Test", sales),
                 createSeller(2L, "Fernando Test2", sales)
         );
-        when(sellerRepository
+        Mockito.when(sellerRepository
                 .findAll())
                 .thenReturn(sellers);
         List<SellerDTO> sellersResult = sellerService.findAll();
-        assertNotNull(sellersResult);
-        assertEquals(sellers.get(0).getId(), sellersResult.get(0).getId());
-        assertEquals(sellers.get(0).getName(), sellersResult.get(0).getName());
-        assertEquals(sellers.get(1).getId(), sellersResult.get(1).getId());
-        assertEquals(sellers.get(1).getName(), sellersResult.get(1).getName());
+        Assert.assertNotNull(sellersResult);
+        Assert.assertEquals(sellers.get(0).getId(), sellersResult.get(0).getId());
+        Assert.assertEquals(sellers.get(0).getName(), sellersResult.get(0).getName());
+        Assert.assertEquals(sellers.get(1).getId(), sellersResult.get(1).getId());
+        Assert.assertEquals(sellers.get(1).getName(), sellersResult.get(1).getName());
     }
-
 
     private Seller createSeller(Long id, String name, List<Sale> sale) {
         return new Seller(id, name, sale);
