@@ -1,4 +1,4 @@
-package br.com.fernando.vendaapi.controllersTest;
+package br.com.fernando.vendaapi.servicesTest;
 
 import br.com.fernando.vendaapi.dtos.SellerDTO;
 import br.com.fernando.vendaapi.entities.Sale;
