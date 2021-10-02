@@ -13,7 +13,7 @@ const Dashboard = () => {
         <div className="row px-3">
           <div className="col-sm-6">
             <h5 className="text-center text-secondary" title="Calcula a porcentagem de negócios fechados com base no total de clientes visitados.">
-              Taxa de vendas (%)
+              Taxa de Vendas (%)
             </h5>
             <BarChart />
           </div>

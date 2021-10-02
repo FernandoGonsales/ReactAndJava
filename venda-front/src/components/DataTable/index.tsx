@@ -37,8 +37,8 @@ const DataTable = () => {
             <tr>
               <th>Data</th>
               <th>Vendedor</th>
-              <th>Clientes visitados</th>
-              <th>Negócios fechados</th>
+              <th>Clientes Visitados</th>
+              <th>Negócios Fechados</th>
               <th>Valor</th>
             </tr>
           </thead>
@@ -49,7 +49,7 @@ const DataTable = () => {
                 <td>{x.seller.name}</td>
                 <td>{x.visited}</td>
                 <td>{x.deals}</td>
-                <td>{x.amount.toFixed(2)}</td>
+                <td>R$ {x.amount.toFixed(2)}</td>
               </tr>
             ))}
           </tbody>

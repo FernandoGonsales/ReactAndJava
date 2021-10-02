@@ -8,7 +8,7 @@ import { BASE_URL } from 'utils/requests';
 
 const BarChart = () => {
 
-  const [chartData, setChartData] = useState<BarChartData>({ labels: { categories: [] }, series: [{ name: "", data: [] }] });
+  const [chartData, setChartData] = useState<BarChartData>({ labels: { categories: ["CARREGANDO...", "CARREGANDO...", "CARREGANDO..."] }, series: [{ name: "", data: [] }] });
 
   const options = {
     plotOptions: {

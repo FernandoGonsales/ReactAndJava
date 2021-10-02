@@ -7,7 +7,7 @@ import { BASE_URL } from 'utils/requests';
 
 const DonutChart = () => {
 
-  const [chartData, setChartData] = useState<DonutChartData>({ labels: [], series: [] })
+  const [chartData, setChartData] = useState<DonutChartData>({ labels: ["CARREGANDO...", "CARREGANDO...", "CARREGANDO...", "CARREGANDO..."], series: [] })
 
   useEffect(() => {
     axios.get(`${BASE_URL}/amount-by-seller`)
